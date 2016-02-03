@@ -1,0 +1,61 @@
+body
+{
+   font-family: 'Source Sans Pro', sans-serif;
+    font-size:24px;
+}
+
+h2
+{
+    font-size:48px;
+    font-family: 'Amatic SC', cursive;
+}
+
+h3
+{
+    font-size:36px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.logo{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;   
+}
+
+.navigation /* section 1*/
+{
+   font-family: 'Permanent Marker', cursive;   
+}
+
+.section2
+{
+    border-bottom: 1px solid grey;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #3C4035;
+    color: aliceblue;
+    font-size: 24px;
+    text-align:center;
+}
+
+
+
+.section3
+{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: black;
+    color: aliceblue;
+    font-size: 32px;
+}
+
+.section4
+{
+    padding-top: 5%;
+    padding-bottom: 10%;
+   background-color: #D7EEB2;
+}
+
