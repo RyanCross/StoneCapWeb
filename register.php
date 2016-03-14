@@ -31,17 +31,19 @@
 		if (!$c_password_error && !$email_error){
 			mt_srand(); // Seed number generator
 			$salt = mt_rand();
+      print $salt;
 			$hash = sha1($salt . $password);
+      print $hash;
 
 			// Insert appropriate data into authentication user info, this must be first as authentication depends on this!
-      $query = $db->prepare("INSERT INTO terrachi_db.authentication VALUES (?,?,?);");
-      $query->bind_param("ssi", $email, $hash, $salt) or die("User account creation prepare error");
+      $query = $db->prepare("INSERT INTO terrachi_db.authentication VALUES (?,?,?);") or die("User account creation prepare error1");
+      $query->bind_param("ssi", $email, $hash, $salt) or die("User account creation prepare error2");
       $res = $query->execute() or die("User account creation error");
 
 			// Start session and redirect to home.php
 			session_start();
 			$_SESSION['login'] = $email;
-			header('location: tls-game.php');
+			header('location: http://www.google.com');
 		}
 
 	}
