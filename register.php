@@ -38,9 +38,10 @@
       print $hash;
 
 			// Insert appropriate data into authentication user info, this must be first as authentication depends on this!
-      $query = $db->prepare("INSERT INTO terrachi_db.authentication (email, password_hash, salt) VALUES (?,?,?);") or die("User account creation prepare error1");
-      $query->bind_param("ssi", $email, $hash, $salt) or die("User account creation prepare error2");
-      $res = $query->execute() or die("User account creation error");
+      //$query = $db->prepare("INSERT INTO terrachi_db.authentication (email, password_hash, salt) VALUES (?,?,?);") or die("User account creation prepare error1");
+      //$query->bind_param("ssi", $email, $hash, $salt) or die("User account creation prepare error2");
+      $query = "INSERT INTO terrachi_db.authentication (email, password_hash, salt) VALUES ('".$email."','".$hash."','".$salt."';";
+      $res = $db->query($query) or die("User account creation error ". $db->error);
 
 			// Start session and redirect to home.php
 			session_start();
@@ -62,7 +63,7 @@
 		<div class="form-group <?php if ($email_error) echo 'has-error'; ?>">
 			<label for="email" class="control-label">Email</label>
 			<input id="email" type="text" name="email" class="form-control" value="<?php echo $email; ?>" required>
-			<?php if ($email_error) echo '<p class="help-block">There is already an account with this league!</p>'; ?>
+			<?php if ($email_error) echo '<p class="help-block">There is already an account using this email!</p>'; ?>
 		</div>
 		<div class="form-group">
 			<label for="password" class="control-label">Password</label>
