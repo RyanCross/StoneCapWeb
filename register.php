@@ -40,7 +40,7 @@
 			// Insert appropriate data into authentication user info, this must be first as authentication depends on this!
       //$query = $db->prepare("INSERT INTO terrachi_db.authentication (email, password_hash, salt) VALUES (?,?,?);") or die("User account creation prepare error1");
       //$query->bind_param("ssi", $email, $hash, $salt) or die("User account creation prepare error2");
-      $query = "INSERT INTO terrachi_db.authentication (email, password_hash, salt) VALUES ('".$email."','".$hash."','".$salt."';";
+      $query = "INSERT INTO terrachi_db.authentication (email, password_hash, salt) VALUES ('".$email."','".$hash."','".$salt."');";
       print $query;
       $res = $db->query($query) or die("User account creation error ". $db->error);
 
