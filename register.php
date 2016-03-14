@@ -24,8 +24,7 @@
 
 		// Make sure that the league is available (does not already exist)
     $query = "SELECT email FROM terrachi_db.authentication WHERE email=".$email;
-		$res = $db->query($query) or die("Email check error");
-    $res = $res->fetch_assoc();
+		$res = $db->query($query) or die("Email check error ". $db->error);
 		if (count($res) > 0) $email_error = true;
 
 		if (!$c_password_error && !$email_error){
