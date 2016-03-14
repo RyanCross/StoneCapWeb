@@ -7,7 +7,7 @@
 
    $host = "us-cdbr-azure-east-a.cloudapp.net";
    $user = "b0300454e18c04";
-   $pass = "8102aa3d"; //no pass
+   $pass = "8102aa3d";
    $db = "terrachi_db";
    $port = 3306;
 
