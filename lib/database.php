@@ -12,7 +12,7 @@
    $port = 3306;
 
    //Connect to the database:
-   $db = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error()); //connect to database, else generate error onto screen.
+   $db = mysqli_connect($host, $user, $pass, $db, $port) or die("Database error " . mysql_error()); //connect to database, else generate error onto screen.
    //$db is now an object of the class mysqli, which represents a connection between PHP and a database.
 
 
