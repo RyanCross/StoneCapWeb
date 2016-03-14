@@ -23,9 +23,10 @@
 		include("util/database.php");
 
 		// Make sure that the league is available (does not already exist)
-    $query = "SELECT email FROM terrachi_db.authentication WHERE email='".$email."';";
-		$res = $db->query($query) or die("Email check error ". $db->error);
-		if (count($res) > 0) $email_error = true;
+    $query = $db->prepare("SELECT email FROM terrachi_db.authentication WHERE email=?;");
+    $query->bind_param("s", $email);
+		$res = $query->execute() or die("Email check error ". $db->error);
+		if ($res->num_rows > 0) $email_error = true;
 
 		if (!$c_password_error && !$email_error){
 			mt_srand(); // Seed number generator
