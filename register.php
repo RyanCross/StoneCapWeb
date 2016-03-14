@@ -34,8 +34,9 @@
 			$hash = sha1($salt . $password);
 
 			// Insert appropriate data into authentication user info, this must be first as authentication depends on this!
-      $query = "INSERT INTO terrachi_db.authentication VALUES (".$email.",".$hash.",".$salt.");";
-      $res = $db->query($query) or die("User account creation error");
+      $query = $db->prepare("INSERT INTO terrachi_db.authentication VALUES (?,?,?);");
+      $query->bind_param("sss", $email, $hash, $salt);
+      $res = $query->execute() or die("User account creation error");
 
 			// Start session and redirect to home.php
 			session_start();
