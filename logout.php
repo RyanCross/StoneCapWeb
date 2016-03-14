@@ -1,8 +1,6 @@
 <?php
-if( isset($_POST['logout']) )
-    {
-        session_destroy();
-        header("Location: /views/login.php");
-    }
-
+session_start();
+$_SESSION = array(); // unset session variables
+session_destroy(); // destroy session
+header('location: tls-game.php');
 ?>
