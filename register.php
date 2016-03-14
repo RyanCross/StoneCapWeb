@@ -46,7 +46,7 @@
 	}
 
 	// Display the login form
-	include_once('util/head.php');
+	include_once('util/header.php');
 
 ?>
 <div class="container">
