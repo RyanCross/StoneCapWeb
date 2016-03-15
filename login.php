@@ -21,7 +21,7 @@
 		//$conn = pg_connect(HOST." ".DBNAME." ".USERNAME." ".PASSWORD) or die("Failed to connect to the database");
 
 		// First, try to find the authentication information for provided league.
-    $query = "SELECT email,password_hash FROM terrachi_db.authentication WHERE email = '".$email."';";
+    $query = "SELECT email,password_hash,salt FROM terrachi_db.authentication WHERE email = '".$email."';";
     $res = $db->query($query) or die("Email check error ". $db->error);
 		if ($res->num_rows == 0) $email_error = true;
 
