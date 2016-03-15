@@ -13,7 +13,7 @@
 		$password = $_POST['password'];
 
 		// Prevent the addition of html special characters
-		$email = htmlspecialchars($league);
+		$email = htmlspecialchars($email);
 		$password = htmlspecialchars($password);
 
 		// Connect to the database
@@ -51,7 +51,7 @@
 	</div>
 	<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>" >
 		<div class="form-group <?php if ($email && $email_error) echo 'has-error'; ?>">
-			<label for="email" class="control-label">League</label>
+			<label for="email" class="control-label">Email</label>
 			<input id="email" type="text" name="email" class="form-control" value="<?php echo $email; ?>" required>
 			<?php if ($email && $email_error) echo '<p class="help-block">Sorry, we have no record of this league in our database!</p>'; ?>
 		</div>
