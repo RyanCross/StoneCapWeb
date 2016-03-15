@@ -9,7 +9,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <head/>
 <body>
-<?php if ($logged_in){ ?>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -23,13 +22,13 @@
 		</div>
 		<div class="collapse navbar-collapse" id="nav-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="home.php">Home</a></li>
-				<li><a href="players.php">About</a></li>
-				<li><a href="trade.php">Register</a></li>
+				<li><a href="tls-game.php">Home</a></li>
+				<li><a href="about.php">About</a></li>
+				<?php if ($logged_in) { ?><li><a href="logout.php">Logout</a></li><?php } ?>
+				<?php if (!$logged_in) { ?>
+					<li><a href="login.php">Login</a></li>
+				<?php } ?>
 			</ul>
         </div>
 	</div>
 </nav>
-<?php
-}
-?>

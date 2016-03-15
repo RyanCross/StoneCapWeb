@@ -23,7 +23,7 @@
 		// First, try to find the authentication information for provided league.
     $query = "SELECT email,password_hash FROM terrachi_db.authentication WHERE email = '".$email."';";
     $res = $db->query($query) or die("Email check error ". $db->error);
-		if ($res->num_rows > 0) $email_error = true;
+		if ($res->num_rows == 0) $email_error = true;
 
 		if (!$email_error){
 			// Do a local hash of the provided password and fetched salt and then check that hash against the password
