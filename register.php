@@ -76,7 +76,7 @@
 			<?php if ($c_password_error) echo '<p class="help-block">This field did not match your password field!</p>'; ?>
 		</div>
         <input type="submit" name="submit" class="btn btn-success" value="Register" />
-		<a href="index.php" class="btn btn-default">Login</a>
+		<a href="login.php" class="btn btn-default">Login</a>
 	</form>
 </div>
 <?php
