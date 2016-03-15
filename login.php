@@ -31,8 +31,8 @@
 			$salt = intval($res['salt']);
 			$check_hash = sha1($salt . $password);
 
-      print $res['password_hash']
-      print "\n".$check_hash
+      print $res['password_hash'];
+      print "\n".$check_hash;
 
 			if ($check_hash == $res['password_hash']){
 				// Start session and redirect to home.php
