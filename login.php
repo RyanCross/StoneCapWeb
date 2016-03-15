@@ -21,7 +21,7 @@
 		//$conn = pg_connect(HOST." ".DBNAME." ".USERNAME." ".PASSWORD) or die("Failed to connect to the database");
 
 		// First, try to find the authentication information for provided league.
-    $query = "SELECT email,password FROM terrachi_db.authentication WHERE email = '".$email."';";
+    $query = "SELECT email,password_hash FROM terrachi_db.authentication WHERE email = '".$email."';";
     $res = $db->query($query) or die("Email check error ". $db->error);
 		if ($res->num_rows > 0) $email_error = true;
 
@@ -51,8 +51,8 @@
 	</div>
 	<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>" >
 		<div class="form-group <?php if ($email && $email_error) echo 'has-error'; ?>">
-			<label for="league" class="control-label">League</label>
-			<input id="league" type="text" name="league" class="form-control" value="<?php echo $email; ?>" required>
+			<label for="email" class="control-label">League</label>
+			<input id="email" type="text" name="email" class="form-control" value="<?php echo $email; ?>" required>
 			<?php if ($email && $email_error) echo '<p class="help-block">Sorry, we have no record of this league in our database!</p>'; ?>
 		</div>
 		<div class="form-group <?php if ($password_error) echo 'has-error'; ?>">
