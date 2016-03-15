@@ -34,7 +34,7 @@
 			mt_srand(); // Seed number generator
 			$salt = mt_rand();
       print $salt;
-			$hash = sha1($salt . $password);
+			$hash = sha1((string)$salt . $password);
       print $hash;
 
 			// Insert appropriate data into authentication user info, this must be first as authentication depends on this!
