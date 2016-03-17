@@ -30,7 +30,7 @@
   <?php if ($logged_in) { ?>
   <p>All buys:</p>
   <?php
-  $query = "SELECT license_key,buy_date FROM terrachi_db.game_status WHERE game_owner = '".$logged_in."';";
+  $query = "SELECT serial_key,buy_date FROM terrachi_db.game_status WHERE game_owner = '".$logged_in."';";
   $res = $db->query($query) or die("Previous purchase check error ". $db->error);
   if ($res->num_rows == 0) {
     print "<p>None!</p>";
