@@ -6,6 +6,10 @@
 	session_start();
 	$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
 
+  if (isset($_POST['submit'])){
+    $buy_date = time();
+    print $buy_date;
+  }
 
   include_once("util/header.php");
 ?>

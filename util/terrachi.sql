@@ -18,12 +18,13 @@ DROP TABLE IF EXISTS authentication;
 CREATE TABLE game_status (
   serial_key      VARCHAR(20) PRIMARY KEY,
   game_owner      VARCHAR(100) NOT NULL,
+  buy_date		    INT NOT NULL,
   activated       BOOLEAN DEFAULT FALSE,
-  activation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  activation_date INT DEFAULT 0,
   completed       BOOLEAN DEFAULT FALSE,
-  completion_date TIMESTAMP,
+  completion_date INT DEFAULT 0,
   donated         BOOLEAN DEFAULT FALSE,
-  donation_date   TIMESTAMP
+  donation_date   INT DEFAULT 0
 );
 
 CREATE INDEX game_onwer ON game_status(game_owner);
@@ -39,7 +40,7 @@ CREATE TABLE authentication (
 	salt 		   VARCHAR(40) NOT NULL
 );
 
--- Table: terrachi.log
+game_status-- Table: terrachi.log
 -- Columns:
 --    log_id     - A unique ID for the log entry. Set by a sequence.
 --    league   - The user whose action generated this log entry.
