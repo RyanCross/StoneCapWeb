@@ -35,8 +35,7 @@
   if ($res->num_rows == 0) {
     print "<p>None!</p>";
   } else {
-    $res = $res->fetch_assoc();
-    foreach($res as $p){
+    while($row = $result->fetch_assoc()) {
       print "<p>".$p['serial_key']." ".$p['buy_date']."</p>";
     }
   }
