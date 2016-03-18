@@ -37,7 +37,7 @@
   } else {
     $res = $res->fetch_assoc();
     foreach($res as $p){
-      print "<p>".$p['license_key']." ".$p['buy_date']."</p>";
+      print "<p>".$p['serial_key']." ".$p['buy_date']."</p>";
     }
   }
   ?>
