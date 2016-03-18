@@ -35,7 +35,7 @@
   if ($res->num_rows == 0) {
     print "<p>None!</p>";
   } else {
-    while($row = $result->fetch_assoc()) {
+    while($row = $res->fetch_assoc()) {
       print "<p>".$p['serial_key']." ".$p['buy_date']."</p>";
     }
   }
