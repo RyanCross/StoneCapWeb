@@ -11,12 +11,18 @@
 #header h1 {
   color: white;
 }
-.btn-header,
-.btn-header:hover {
+.btn-header {
   color: white;
   border: 1px solid white;
   border-radius: 5px;
   font-size: 24px;
+}
+.btn-header:hover,
+.btn-header:focus {
+  color: rgba(0,0,0,0);
+  background-color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 /* Desktop */
@@ -24,9 +30,9 @@
   #header, #gray-background {
     height: 600px;
   }
-  #gra
   #header h1 {
     margin-top: 300px;
+    text-size: 92px;
   }
 }
 
