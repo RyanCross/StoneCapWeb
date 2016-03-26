@@ -39,6 +39,9 @@
     margin-top: 200px;
     font-size: 92px;
   }
+  .section {
+    margin-top: -100px;
+  }
 }
 
 /* Mobile */

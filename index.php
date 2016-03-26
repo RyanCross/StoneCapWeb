@@ -9,27 +9,6 @@
   include_once("util/header.php");
 ?>
 
-<div id="header">
-<div id="gray-background">
-  <!-- Navbar -->
-  <div class="container-fluid">
-  <div class="row" id="nav">
-    <div class="col-xs-2">
-      <a href="index.php" class="btn btn-header">Home</a>
-    </div>
-    <div class="col-xs-2 col-xs-offset-8">
-      <?php if ($logged_in) { ?><a href="logout.php" class="btn btn-header">Logout</a><?php } ?>
-      <?php if (!$logged_in) { ?>
-        <a href="login.php" class="btn btn-header">Login</a>
-      <?php } ?>
-    </div>
-  </div>
-  </div>
-
-  <h1>Terrachi</h1>
-</div>
-</div>
-
 <div class="container">
 
   <!-- About the game -->
@@ -38,7 +17,7 @@
     <div class="col-xs-12 col-sm-6">
       <h2>About Terrachi</h2>
       <p>
-        On the first day of the Season of Growth, the kodama gather to send off their 
+        On the first day of the Season of Growth, the kodama gather to send off their
         finest warriors. As the ceremony is taking place, suddenly a darkness falls
         across the village. The Grey has found the kodama’s home and begin to harvest
         the last remains of the Green. As chaos erupts and the village falls, one young

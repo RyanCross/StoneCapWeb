@@ -5,7 +5,7 @@
 	// Second, make sure we are not already logged in, if so, redirect to home.php, if not, display the registration form
 	session_start();
 	$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
-	if ($logged_in) header('location: tls-game.php');
+	if ($logged_in) header('location: index.php');
 
 	// Third, see if the form was already submitted, and if so, check information
 	if (isset($_POST['submit'])){
@@ -45,7 +45,7 @@
 			// Start session and redirect to home.php
 			session_start();
 			$_SESSION['login'] = $email;
-			header('location: tls-game.php');
+			header('location: index.php');
 		}
 
 	}

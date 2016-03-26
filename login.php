@@ -5,7 +5,7 @@
 	// Second, make sure we are not already logged in, if so, redirect to home.php, if not, display the login form
 	session_start();
 	$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
-	if ($logged_in) header('location: tls-game.php');
+	if ($logged_in) header('location: index.php');
 
 	// If the from was submitted, process information and log the user in if valid
 	if (isset($_POST['submit'])){
@@ -34,7 +34,7 @@
 			if ($check_hash == $res['password_hash']){
 				// Start session and redirect to home.php
 				$_SESSION['login'] = $email;
-				header('location: tls-game.php');
+				header('location: index.php');
 			} else {
 				$password_error = true;
 			}
@@ -45,7 +45,7 @@
 	include_once('util/header.php');
 
 ?>
-<div class="container">
+<div class="container section">
 	<div class="page-header">
 		<h1>Login</h1>
 	</div>
