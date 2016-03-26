@@ -4,6 +4,7 @@
   background-position: center;
 
   text-align: center;
+  padding-top: 20px;
 }
 #gray-background {
   background-color: rgba(50,50,50,.5);
@@ -13,13 +14,13 @@
 }
 .btn-header {
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 18px;
 }
 .btn-header:hover,
 .btn-header:focus {
-  color: rgba(0,0,0,0);
+  color: rgb(26,80,91);
   background-color: white;
   border: none;
   border-radius: 5px;
@@ -31,8 +32,8 @@
     height: 600px;
   }
   #header h1 {
-    margin-top: 300px;
-    text-size: 92px;
+    margin-top: 100px;
+    font-size: 92px;
   }
 }
 
