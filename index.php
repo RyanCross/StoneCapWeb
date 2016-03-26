@@ -9,7 +9,7 @@
   include_once("util/header.php");
 ?>
 
-<div id="header">
+<div id="header" class="container">
 <div id="gray-background">
   <!-- Navbar -->
   <div class="row">
@@ -32,8 +32,8 @@
 
   <!-- About the game -->
   <div class="row">
-    <div class="col-xs-12 col-sm-5"><img src="" /></div>
-    <div class="col-xs-12 col-sm-7">
+    <div class="col-xs-12 col-sm-6"><img src="img/kodama256.png" class="img-responsive"/></div>
+    <div class="col-xs-12 col-sm-6">
       <h2>About Terrachi</h2>
       <p>Lorem ipsum</p>
     </div>
