@@ -4,11 +4,13 @@
   background-position: center;
 
   text-align: center;
-  padding-top: 20px;
+}
+#header nav {
+  margin-top: 20px;
 }
 #gray-background {
   background-color: rgba(50,50,50,.5);
-  margin-top: -20px;
+  margin: 0 -15px -15px 0;
 }
 #header h1 {
   color: white;

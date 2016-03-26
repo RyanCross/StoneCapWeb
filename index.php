@@ -9,10 +9,10 @@
   include_once("util/header.php");
 ?>
 
-<div id="header" class="container">
+<div id="header" class="container-fluid">
 <div id="gray-background">
   <!-- Navbar -->
-  <div class="row">
+  <div class="row" id="nav">
     <div class="col-xs-2">
       <a href="index.php" class="btn btn-header">Home</a>
     </div>
