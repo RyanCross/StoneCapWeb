@@ -34,10 +34,17 @@
 
   <!-- About the game -->
   <div class="row">
-    <div class="col-xs-12 col-sm-6"><img src="img/kodama256.png" class="img-responsive"/></div>
+    <div class="col-xs-12 col-sm-6"><img src="img/kodama256.png" class="img-responsive pull-right"/></div>
     <div class="col-xs-12 col-sm-6">
       <h2>About Terrachi</h2>
-      <p>Lorem ipsum</p>
+      <p>
+        On the first day of the Season of Growth, the kodama gather to send off their 
+        finest warriors. As the ceremony is taking place, suddenly a darkness falls
+        across the village. The Grey has found the kodama’s home and begin to harvest
+        the last remains of the Green. As chaos erupts and the village falls, one young
+        kodama deemed unfit for the expedition sees a vulnerable sapling on the ground
+        and in a moment of panic, picks it up and flees the destruction.
+      </p>
     </div>
   </div>
 

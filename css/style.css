@@ -1,17 +1,17 @@
 #header {
   background-image: url("../img/coding.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   text-align: center;
-  padding-top:15px;
 }
 #header nav {
   margin-top: 20px;
 }
 #gray-background {
   background-color: rgba(50,50,50,.5);
-  margin-top: -15px;
+  padding-top:  15px;
 }
 #header h1 {
   color: white;
@@ -26,7 +26,7 @@
 .btn-header:focus {
   color: rgb(26,80,91);
   background-color: white;
-  border: none;
+  border: 2px solid white;
   border-radius: 5px;
 }
 
