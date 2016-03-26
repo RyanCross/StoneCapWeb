@@ -1,12 +1,13 @@
 #header {
-  background-image: url("img/coding.jpg");
+  background-image: url("../img/coding.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
   text-align: center;
+  font-color: white;
 }
 #header > h1 {
-  font-color: white;
+
 }
 
 /* Desktop */
