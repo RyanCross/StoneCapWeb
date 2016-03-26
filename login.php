@@ -44,8 +44,10 @@
 	// Display the login form
 	include_once('util/header.php');
 
+	include_once('util/nav.php');
+
 ?>
-<div class="container section">
+<div class="container">
 	<div class="page-header">
 		<h1>Login</h1>
 	</div>
