@@ -12,32 +12,20 @@
 <div id="header">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-terrachi" role="navigation">
-  	<div class="container-fluid">
-  		<div class="navbar-header">
-  			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
-  				<span class="sr-only">Toggle navigation</span>
-  				<span class="icon-bar"></span>
-  				<span class="icon-bar"></span>
-  				<span class="icon-bar"></span>
-  			</button>
-  		</div>
-  		<div class="collapse navbar-collapse" id="nav-collapse">
-  			<ul class="nav navbar-nav">
-  				<li><a href="index.php">Home</a></li>
-  			</ul>
-  			<ul class="nav navbar-nav navbar-right">
-  				<?php if ($logged_in) { ?><li><a href="logout.php">Logout</a></li><?php } ?>
-  				<?php if (!$logged_in) { ?>
-  					<li><a href="login.php">Login</a></li>
-  				<?php } ?>
-  			</ul>
-      </div>
-  	</div>
-  </nav>
+  <div class="row">
+    <div class="col-xs-2">
+      <a href="index.php" class="btn btn-header">Home</a>
+    </div>
+    <div class="col-xs-2 col-xs-offset-8">
+      <?php if ($logged_in) { ?><a href="logout.php" class="btn btn-header">Logout</a><?php } ?>
+      <?php if (!$logged_in) { ?>
+        <a href="login.php" class="btn btn-header">Login</a>
+      <?php } ?>
+    </div>
+  </div>
 
   <h1>Terrachi</h1>
-  
+
 </div>
 
 <div class="container">
