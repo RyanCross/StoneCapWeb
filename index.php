@@ -10,7 +10,7 @@
 ?>
 
 <div id="header">
-
+<div id="gray-background">
   <!-- Navbar -->
   <div class="row">
     <div class="col-xs-2">
@@ -25,7 +25,7 @@
   </div>
 
   <h1>Terrachi</h1>
-
+</div>
 </div>
 
 <div class="container">
