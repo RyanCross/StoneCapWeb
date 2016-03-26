@@ -48,24 +48,26 @@
 
 ?>
 <div class="container">
-	<div class="page-header">
-		<h1>Login</h1>
-	</div>
-	<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>" >
-		<div class="form-group <?php if ($email && $email_error) echo 'has-error'; ?>">
-			<label for="email" class="control-label">Email</label>
-			<input id="email" type="text" name="email" class="form-control" value="<?php echo $email; ?>" required>
-			<?php if ($email && $email_error) echo '<p class="help-block">Sorry, we have no record of this league in our database!</p>'; ?>
-		</div>
-		<div class="form-group <?php if ($password_error) echo 'has-error'; ?>">
-			<label for="password" class="control-label">Password</label>
-			<input id="password" type="password" name="password" class="form-control" required>
-			<?php if ($password_error) echo '<p class="help-block">The password you provided was not correct!</p>'; ?>
-		</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+			<h1>Login</h1>
+			<form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>" >
+				<div class="form-group <?php if ($email && $email_error) echo 'has-error'; ?>">
+					<label for="email" class="control-label">Email</label>
+					<input id="email" type="text" name="email" class="form-control" value="<?php echo $email; ?>" required>
+					<?php if ($email && $email_error) echo '<p class="help-block">Sorry, we have no record of this league in our database!</p>'; ?>
+				</div>
+				<div class="form-group <?php if ($password_error) echo 'has-error'; ?>">
+					<label for="password" class="control-label">Password</label>
+					<input id="password" type="password" name="password" class="form-control" required>
+					<?php if ($password_error) echo '<p class="help-block">The password you provided was not correct!</p>'; ?>
+				</div>
 
-    <input type="submit" name="submit" class="btn btn-success" value="Login" />
-		<a href="register.php" class="btn btn-default">Register</a>
-	</form>
+		    <input type="submit" name="submit" class="btn btn-success" value="Login" />
+				<a href="register.php" class="btn btn-default">Register</a>
+			</form>
+		</div>
+	</div>
 </div>
 <?php
 	include_once('util/footer.php');
