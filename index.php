@@ -36,9 +36,8 @@
   	</div>
   </nav>
 
-  <div class="jumbotron">
-    <h1>Terrachi</h1>
-  </div>
+  <h1>Terrachi</h1>
+  
 </div>
 
 <div class="container">
