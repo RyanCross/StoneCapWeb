@@ -9,9 +9,10 @@
   include_once("util/header.php");
 ?>
 
-<div id="header" class="container-fluid">
+<div id="header">
 <div id="gray-background">
   <!-- Navbar -->
+  <div class="container-fluid">
   <div class="row" id="nav">
     <div class="col-xs-2">
       <a href="index.php" class="btn btn-header">Home</a>
@@ -22,6 +23,7 @@
         <a href="login.php" class="btn btn-header">Login</a>
       <?php } ?>
     </div>
+  </div>
   </div>
 
   <h1>Terrachi</h1>
