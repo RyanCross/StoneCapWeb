@@ -4,7 +4,7 @@
     <div class="container-fluid">
     <div class="row" id="nav">
       <div class="col-xs-2">
-        <a href="index.php" class="btn btn-header">Home</a>
+        <a href="buy.php" class="btn btn-header">Buy</a>
       </div>
       <div class="col-xs-2 col-xs-offset-8">
         <?php if ($logged_in) { ?><a href="logout.php" class="btn btn-header">Logout</a><?php } ?>
