@@ -6,9 +6,9 @@ if (isset($_GET['key'])){
     $key = htmlspecialchars($_GET['key']);
     $serial_key = md5($logged_in.$buy_date);
     //print $serial_key;
-    $query = "SELECT activated,serial_key FROM terrachi_db.game_status WHERE serial_key='".$key."';";
+    $query = "SELECT completed,completion_date FROM terrachi_db.game_status WHERE serial_key='".$key."';";
     //print $query;
-    $res = $db->query($query) or die("Activation error ". $db->error);
+    $res = $db->query($query) or die("Completion error ". $db->error);
 
     if ($res->num_rows == 0) {
       print '0';
@@ -18,9 +18,9 @@ if (isset($_GET['key'])){
       if($row->activated == true){
         print '0';
       } else {
-        $activated_date = time();
-        $query = "UPDATE terrachi_db.game_status SET activated=TRUE,activation_date=".$activated_date." WHERE serial_key='".$key."';";
-        $res = $db->query($query) or die("Activation error 2". $db->error);
+        $win_date = time();
+        $query = "UPDATE terrachi_db.game_status SET completed=TRUE,completion_date=".$win_date." WHERE serial_key='".$key."';";
+        $res = $db->query($query) or die("Completion error 2". $db->error);
 
         print '1';
       }
