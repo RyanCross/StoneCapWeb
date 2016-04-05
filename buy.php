@@ -61,6 +61,7 @@
 						print '<td class="text-center"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>';
 						else
 						print '<td class="text-center"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>';
+					print '
 					<tr>
 					';
 		    }
