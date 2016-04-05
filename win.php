@@ -15,7 +15,7 @@ if (isset($_GET['key'])){
     } else {
       $row = $res->fetch_assoc();
 
-      if($row->activated === true){
+      iif($row['completed'] == true){
         print '0';
       } else {
         $win_date = time();

@@ -15,7 +15,7 @@ if (isset($_GET['key'])){
     } else {
       $row = $res->fetch_assoc();
 
-      if($row->activated === true){
+      if($row['activated'] == true){
         print '0';
       } else {
         $activated_date = time();
