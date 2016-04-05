@@ -6,7 +6,7 @@ if (isset($_GET['key'])){
     $key = htmlspecialchars($_GET['key']);
     $serial_key = md5($logged_in.$buy_date);
     //print $serial_key;
-    $query = "SELECT activated,serial_key terrachi_db.game_status WHERE serial_key='".$key."';";
+    $query = "SELECT activated,serial_key FROM terrachi_db.game_status WHERE serial_key='".$key."';";
     //print $query;
     $res = $db->query($query) or die("Activation error ". $db->error);
 
