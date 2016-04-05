@@ -54,7 +54,7 @@
 					$date->setTimestamp($row['buy_date']);
 					print $row['activated'];
 					print '
-					<tr class="';if ($row['activated'] == true) print 'success' else print 'danger'; print '">
+					<tr class="';if ($row['activated'] == true) print 'success'; else print 'danger'; print '">
 		      	<td>'.$row['serial_key'].'</td>
 						<td>'.$date->format('g:ia n/j/Y').'</td>';
 						if ($row['activated'] == true)
