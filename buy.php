@@ -32,7 +32,7 @@
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
 
-			<h1>Buy Terrachi<br><small>Account: <?php print $logged_in; ?></small></h1>
+			<h1>Buy Terrachi<br><small><?php print $logged_in; ?></small></h1>
 			<br>
 		  <?php
 			if ($logged_in) {
@@ -52,9 +52,8 @@
 		    while($row = $res->fetch_assoc()) {
 					$date = new DateTime();
 					$date->setTimestamp($row['buy_date']);
-					print $row['activated'];
 					print '
-					<tr class="';if ($row['activated'] == true) print 'success'; else print 'danger'; print '">
+					<tr class="';if ($row['activated'] == true) print 'danger'; else print 'success'; print '">
 		      	<td>'.$row['serial_key'].'</td>
 						<td>'.$date->format('g:ia n/j/Y').'</td>';
 						if ($row['activated'] == true)
@@ -70,6 +69,7 @@
 				';
 		  }
 		  ?>
+			<hr>
 		  <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>" >
 				<div class="form-group <?php if ($invite_error) echo 'has-error'; ?>">
 					<?php if ($invite_error) echo '<p class="help-block">The invite code you provided was not correct!</p>'; ?>
