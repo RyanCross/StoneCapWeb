@@ -2,8 +2,8 @@
 // Connect to the database
 include("util/database.php");
 
-if (isset($_GET['key'])){
-    $key = htmlspecialchars($_GET['key']);
+if (isset($_POST['key'])){
+    $key = htmlspecialchars($_POST['key']);
     $serial_key = md5($logged_in.$buy_date);
     //print $serial_key;
     $query = "SELECT completed,completion_date FROM terrachi_db.game_status WHERE serial_key='".$key."';";
