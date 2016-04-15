@@ -35,7 +35,7 @@
 <h3>3. Total number of players who have beaten the game since last donation date</h3>
 <h4>
 <?php
-	$query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1, donated=0;";
+	$query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1 AND donated=0;";
 	$res3 = $db->query($query3) or die("Error ". $db->error);
 	$array3 = $res3->fetch_assoc();
 	echo array_shift(array_values($array3));
