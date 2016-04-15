@@ -45,7 +45,7 @@
 <h3>4. Current amount of money to be donated to charity</h3>
 <h4>
 <?php
-	$query4 = "SELECT COUNT(*) * 10 FROM game_status WHERE completed=1,donated=0;";
+	$query4 = "SELECT COUNT(*) * 10 FROM game_status WHERE completed=1 AND donated=0;";
 	$res4 = $db->query($query4) or die("Error ". $db->error);
 	$array4 = $res4->fetch_assoc();
 	echo array_shift(array_values($array4));
