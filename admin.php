@@ -13,7 +13,7 @@
 <h3>1. Total number of trees planted to date</h3>
 <h4>
 <?php
-	$query1 = "SELECT COUNT(*) FROM game_status WHERE completion_date > donation_date;";
+	$query1 = "SELECT COUNT(*) FROM game_status WHERE donated=1;";
 	$res1 = $db->query($query1) or die("Error ". $db->error);
 	$array1 = $res1->fetch_assoc();
 	// foreach($array1 as $key => $value)
@@ -25,7 +25,7 @@
 <h3>2. Total amount of money that has donated as of last donation date</h3>
 <h4>
 <?php
-	$query2 = "SELECT COUNT(*) * 10 FROM game_status WHERE completion_date > donation_date;";
+	$query2 = "SELECT COUNT(*) * 10 FROM game_status WHERE donated=1;";
 	$res2 = $db->query($query2) or die("Error ". $db->error);
 	$array2 = $res2->fetch_assoc();
 	echo array_shift(array_values($array2));
@@ -35,7 +35,7 @@
 <h3>3. Total number of players who have beaten the game since last donation date</h3>
 <h4>
 <?php
-	$query3 = "SELECT COUNT(*) FROM game_status WHERE completion_date > (SELECT MAX(donation_date) FROM game_status);";
+	$query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1, donated=0;";
 	$res3 = $db->query($query3) or die("Error ". $db->error);
 	$array3 = $res3->fetch_assoc();
 	echo array_shift(array_values($array3));
@@ -45,7 +45,7 @@
 <h3>4. Current amount of money to be donated to charity</h3>
 <h4>
 <?php
-	$query4 = "SELECT COUNT(*) * 10 FROM game_status WHERE completion_date > (SELECT MAX(donation_date) FROM game_status);";
+	$query4 = "SELECT COUNT(*) * 10 FROM game_status WHERE completed=1,donated=0;";
 	$res4 = $db->query($query4) or die("Error ". $db->error);
 	$array4 = $res4->fetch_assoc();
 	echo array_shift(array_values($array4));
