@@ -17,6 +17,7 @@
 	    $serial_key = md5($logged_in.$buy_date);
 	    //print $serial_key;
 	    $query = "INSERT INTO terrachi_db.game_status (serial_key, game_owner, buy_date) VALUES ('".$serial_key."','".$logged_in."','".$buy_date."');";
+	    $query_all = "SELECT * FROM terrachi_db.game"
 	    //print $query;
 	    $res = $db->query($query) or die("Game buy error ". $db->error);
 		} else $invite_error = true;
