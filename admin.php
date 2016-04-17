@@ -49,20 +49,18 @@ include("util/database.php");
 	?>
 	</h4>
 	
-<h3> <a href=" ">Update Donation Statistics</a> </h3>
+<h3>  5 </h3>
 	<form method = "POST" action = "<?= $_SERVER[PHP_SELF] ?>">
 	<?php
 	$query = "SELECT game_owner, FROM_UNIXTIME(completion_date) completion_date  FROM terrachi_db.game_status WHERE donated=0, completed=1;";
 	if (isset($_POST['submit'])){
-	if ($_POST['invite-code'] === "stonecap"){
-	$invite_error = false;
 	$donation_date = time();
 	//print $buy_date;
 	$serial_key = md5($logged_in.$buy_date);
 	//print $serial_key;
-	$query5 = "UPDATE game_status SET donated=1, donation_date=1".$donation_date." WHERE serial_key IN;";			  
-	$res = $db->query($query) or die("Error ". $db->error);
-		}													
+	$query5 = "UPDATE game_status SET donated=1, donation_date=1".$donation_date." WHERE donated=0 AND completed=1;";			  
+	$res = $db->query($query5) or die("Error ". $db->error);
+	print_r($res);
 	}
 	
 	?>
