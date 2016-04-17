@@ -2,7 +2,7 @@
 // Connect to the database
 include("util/database.php");
 
-if (isset($_POST['key'])){
+if (isset($_POST['key'])) {
     $key = htmlspecialchars($_POST['key']);
     $serial_key = md5($logged_in.$buy_date);
     //print $serial_key;
@@ -15,7 +15,7 @@ if (isset($_POST['key'])){
     } else {
       $row = $res->fetch_assoc();
 
-      iif($row['completed'] == true){
+      if($row['completed'] == true){
         print '0';
       } else {
         $win_date = time();
