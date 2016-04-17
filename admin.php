@@ -22,7 +22,7 @@ include("util/database.php");
 <h3>2. Total amount of money that has donated as of last donation date</h3>
 	<h4>
 	<?php
-	$query2 = "SELECT COUNT(​*) *​ 10 FROM game_status WHERE donated=1;";
+	$query2 = "SELECT COUNT(*) *10 FROM game_status WHERE donated=1;";
 	$res2 = $db->query($query2) or die("Error ". $db->error);
 	$array2 = $res2->fetch_assoc();
 	echo array_shift(array_values($array2));
@@ -42,27 +42,25 @@ include("util/database.php");
 <h3>4. Current amount of money to be donated to charity</h3>
 	<h4>
 	<?php
-	$query4 = "SELECT COUNT(​*) *​ 10 FROM game_status WHERE completed=1 AND donated=0;";
+	$query4 = "SELECT COUNT(*) *10 FROM game_status WHERE completed=1 AND donated=0;";
 	$res4 = $db->query($query4) or die("Error ". $db->error);
 	$array4 = $res4->fetch_assoc();
 	echo array_shift(array_values($array4));
 	?>
 	</h4>
 	
-<h3> <a href=" ">Update Donation Statistics</a> </h3>
+<h3>  5 </h3>
 	<form method = "POST" action = "<?= $_SERVER[PHP_SELF] ?>">
 	<?php
 	$query = "SELECT game_owner, FROM_UNIXTIME(completion_date) completion_date  FROM terrachi_db.game_status WHERE donated=0, completed=1;";
 	if (isset($_POST['submit'])){
-	if ($_POST['invite-code'] === "stonecap"){
-	$invite_error = false;
 	$donation_date = time();
 	//print $buy_date;
 	$serial_key = md5($logged_in.$buy_date);
 	//print $serial_key;
-	$query5 = "UPDATE game_status SET donated=1, donation_date=1".$donation_date." WHERE serial_key IN;";			  
-	$res = $db->query($query) or die("Error ". $db->error);
-		}													
+	$query5 = "UPDATE game_status SET donated=1, donation_date=1".$donation_date." WHERE donated=0 AND completed=1;";			  
+	$res = $db->query($query5) or die("Error ". $db->error);
+	print_r($res);
 	}
 	
 	?>
