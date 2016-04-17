@@ -35,7 +35,7 @@
 <h3>3. Total number of players who have beaten the game since last donation date</h3>
 <h4>
 <?php
-	$query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1, donated=0;";
+	$query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1 AND donated=0;";
 	$res3 = $db->query($query3) or die("Error ". $db->error);
 	$array3 = $res3->fetch_assoc();
 	echo array_shift(array_values($array3));
@@ -45,7 +45,7 @@
 <h3>4. Current amount of money to be donated to charity</h3>
 <h4>
 <?php
-	$query4 = "SELECT COUNT(*) * 10 FROM game_status WHERE completed=1,donated=0;";
+	$query4 = "SELECT COUNT(*) * 10 FROM game_status WHERE completed=1 AND donated=0;";
 	$res4 = $db->query($query4) or die("Error ". $db->error);
 	$array4 = $res4->fetch_assoc();
 	echo array_shift(array_values($array4));
