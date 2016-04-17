@@ -53,10 +53,25 @@
 </h4>
 
 <h3>< a href=" ">Update Donation Statistics</ a><h3>
-	
+
+<form method = "POST" action = "<? = $_SERVER[PHP_SELF]?>">
+
 <?php
-	$query = "SELECT game_owner, FROM_UNIXTIME(completion_date) completion_date  FROM terrachi_db.game_status where donated=0 and completed=1;";
+	$query = "SELECT game_owner, FROM_UNIXTIME(completion_date) completion_date  FROM terrachi_db.game_status WHERE donated=0, completed=1;";
+	if (isset($_POST['submit'])){
+	   if ($_POST['invite-code'] === "stonecap"){
+	   $invite_error = false;
+	   $donation_date = time();
+	   //print $buy_date;
+	   $serial_key = md5($logged_in.$buy_date);
+	   //print $serial_key;
+     	   $query5 = "UPDATE game_status SET donated=1, donation_date=1".$donation_date." WHERE serial_key IN "");";
+	
+	
 	$res = $db->query($query) or die("Error ". $db->error);
+	
+	}
+	//print $query;
 	// $res = $res->fetch_assoc();
 	// print_r($res);
 	// foreach($res as $key => $value)
@@ -69,6 +84,10 @@
 // $completion_date = intval($res['completion_date']);
 
 ?>
+
+<input type = "submit" name = "submit" name = "submit" class = "btn btn-success"  value = "Donate"/>
+
+</form>
 
 <?php
   include_once("util/footer.php");
