@@ -22,7 +22,7 @@ include("util/database.php");
 <h3>2. Total amount of money that has donated as of last donation date</h3>
 	<h4>
 	<?php
-	$query2 = "SELECT COUNT(​*) *​ 10 FROM game_status WHERE donated=1;";
+	$query2 = "SELECT COUNT(*) *10 FROM game_status WHERE donated=1;";
 	$res2 = $db->query($query2) or die("Error ". $db->error);
 	$array2 = $res2->fetch_assoc();
 	echo array_shift(array_values($array2));
@@ -42,7 +42,7 @@ include("util/database.php");
 <h3>4. Current amount of money to be donated to charity</h3>
 	<h4>
 	<?php
-	$query4 = "SELECT COUNT(​*) *​ 10 FROM game_status WHERE completed=1 AND donated=0;";
+	$query4 = "SELECT COUNT(*) *10 FROM game_status WHERE completed=1 AND donated=0;";
 	$res4 = $db->query($query4) or die("Error ". $db->error);
 	$array4 = $res4->fetch_assoc();
 	echo array_shift(array_values($array4));
