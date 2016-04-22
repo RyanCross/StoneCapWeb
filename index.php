@@ -50,13 +50,62 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-4">
 			<div class="thumbnail">
-					<img class="img-responsive img-circle" src="" />
+					<img class="img-responsive img-circle" src="img/ryan.png" />
 					<div class="caption">
-							Ryan Cross
+							<h4>Ryan Cross</h4>
+							<p>Lead Systems Developer</p>
+					</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="thumbnail">
+					<img class="img-responsive img-circle" src="img/tama.jpg" />
+					<div class="caption">
+							<h4>Tama Chakrabarty</h4>
+							<p>Creative Director</p>
+					</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="thumbnail">
+					<img class="img-responsive img-circle" src="img/qi.jpg" />
+					<div class="caption">
+							<h4>Qi Yu</h4>
+							<p>Lead Security Architect</p>
 					</div>
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			<div class="thumbnail">
+					<img class="img-responsive img-circle" src="img/nick.jpg" />
+					<div class="caption">
+							<h4>Nicholas Cappo</h4>
+							<p>Quality Assurance Engineer</p>
+					</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="thumbnail">
+					<img class="img-responsive img-circle" src="img/mike.jpg" />
+					<div class="caption">
+							<h4>Mike Henkey</h4>
+							<p>Lead AI Developer</p>
+					</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="thumbnail">
+					<img class="img-responsive img-circle" src="img/dillon.png" />
+					<div class="caption">
+							<h4>Dillon Byrne</h4>
+							<p>Physics and Lighting Lead</p>
+					</div>
+			</div>
+		</div>
+	</div>
+
 
   <!-- Carousel -->
 
