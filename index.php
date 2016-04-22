@@ -47,6 +47,16 @@
       </p>
     </div>
   </div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			<div class="thumbnail">
+					<img class="img-responsive img-circle" src="" />
+					<div class="caption">
+							Ryan Cross
+					</div>
+			</div>
+		</div>
+	</div>
 
   <!-- Carousel -->
 
