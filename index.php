@@ -32,7 +32,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 
 		  <!-- About the game -->
 		  <div class="row">
@@ -42,7 +42,7 @@
 		      <p>
 		        On the first day of the Season of Growth, the kodama gather to send off their
 		        finest warriors. As the ceremony is taking place, suddenly a darkness falls
-		        across the village. The Grey has found the kodama’s home and begin to harvest
+		        across the village. The Grey has found the kodama's home and begin to harvest
 		        the last remains of the Green. As chaos erupts and the village falls, one young
 		        kodama deemed unfit for the expedition sees a vulnerable sapling on the ground
 		        and in a moment of panic, picks it up and flees the destruction.
@@ -54,7 +54,7 @@
 		  <!-- About the team -->
 			<div class="row">
 				<div class="col-xs-12 col-sm-4">
-					<div class="thumbnail">
+					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/ryan.png" />
 							<div class="caption">
 									<h4>Ryan Cross</h4>
@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<div class="thumbnail">
+					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/tama.jpg" />
 							<div class="caption">
 									<h4>Tama Chakrabarty</h4>
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<div class="thumbnail">
+					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/qi.jpg" />
 							<div class="caption">
 									<h4>Qi Yu</h4>
@@ -83,7 +83,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-4">
-					<div class="thumbnail">
+					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/nick.jpg" />
 							<div class="caption">
 									<h4>Nicholas Cappo</h4>
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<div class="thumbnail">
+					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/mike.jpg" />
 							<div class="caption">
 									<h4>Mike Henkey</h4>
@@ -101,7 +101,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<div class="thumbnail">
+					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/dillon.png" />
 							<div class="caption">
 									<h4>Dillon Byrne</h4>
