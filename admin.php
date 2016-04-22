@@ -58,7 +58,7 @@ include("util/database.php");
 	//print $buy_date;
 	$serial_key = md5($logged_in.$buy_date);
 	//print $serial_key;
-	$query5 = "UPDATE game_status SET donated=1, donation_date=1".$donation_date." WHERE donated=0 AND completed=1;";			  
+	$query5 = "UPDATE game_status SET donated=1, donation_date=".$donation_date." WHERE donated=0 AND completed=1;";			  
 	$res = $db->query($query5) or die("Error ". $db->error);
 	print_r($res);
 	}
