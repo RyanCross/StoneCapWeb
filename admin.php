@@ -49,7 +49,7 @@ include_once("util/nav.php");
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
-			<h1>Admin Panel</h1>
+			<h1>Admin Panel</h1><br>
 
       <div class="progress">
         <div class="progress-bar progress-bar-success" style="width: <?php print($donations_percent); ?>%;">
@@ -63,27 +63,32 @@ include_once("util/nav.php");
       <div class="row">
 
         <div class="col-xs-12 col-sm-4 text-center">
-          <small>Donations to Date</small>
+          <small>Donations to Date <span class="glyphicon glyphicon-stop success" aria-hidden="true"></span></small>
           <br>
           <h1><?php print($donations_num); ?></h1>
         </div>
 
         <div class="col-xs-12 col-sm-4 text-center">
-          <small>Non-donated Wins</small>
+          <small>Non-donated Wins <span class="glyphicon glyphicon-stop info" aria-hidden="true"></span></small>
           <br>
           <h1><?php print($wins_num); ?></h1>
         </div>
 
         <div class="col-xs-12 col-sm-4 text-center">
-          <small>Total Activations</small>
+          <small>Total Activations <span class="glyphicon glyphicon-stop gray" aria-hidden="true"></span></small>
           <br>
           <h1><?php print($registers_num); ?></h1>
         </div>
 
       </div>
 
+      <br>
+
       <form method="POST" action="<?= $_SERVER[PHP_SELF] ?>">
-    	   <input type="submit" name="submit" name="submit" class="btn btn-success"  value="Donate"/>
+        <div class="form-group">
+          <p class="help-block">This button simulates our donation process by classifying each non-donated wins as donations</p>
+    	   <input type="submit" name="submit" name="submit" class="btn btn-success btn-block"  value="Donate"/>
+       </div>
     	</form>
 
 		</div>
