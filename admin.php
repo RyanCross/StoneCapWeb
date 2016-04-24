@@ -6,7 +6,7 @@ session_start();
 $logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
 
 if($logged_in != "cholasca@gmail.com"){
-  header("index.php");
+  header("Location: index.php");
 }
 
 include("util/database.php");
