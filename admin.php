@@ -2,8 +2,12 @@
 // First, make sure we are on HTTPS, if not, switch to that
 //if (!$_SERVER['HTTPS']) header('location: https://babbage.cs.missouri.edu/~cs3380f14grp10');
 // Second, make sure we are not already logged in, if so, redirect to home.php, if not, display the login form
-//session_start();
-//$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
+session_start();
+$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
+
+if($logged_in != "cholasca@gmail.com"){
+  header("index.php");
+}
 
 include("util/database.php");
 
@@ -63,19 +67,19 @@ include_once("util/nav.php");
       <div class="row">
 
         <div class="col-xs-12 col-sm-4 text-center">
-          <small>Donations to Date <span class="glyphicon glyphicon-stop success" aria-hidden="true"></span></small>
+          <small>Donations to Date <span class="glyphicon glyphicon-stop success"  style="color: #5cb85c;" aria-hidden="true"></span></small>
           <br>
           <h1><?php print($donations_num); ?></h1>
         </div>
 
         <div class="col-xs-12 col-sm-4 text-center">
-          <small>Non-donated Wins <span class="glyphicon glyphicon-stop info" aria-hidden="true"></span></small>
+          <small>Non-donated Wins <span class="glyphicon glyphicon-stop" style="color: #5bc0de;" aria-hidden="true"></span></small>
           <br>
           <h1><?php print($wins_num); ?></h1>
         </div>
 
         <div class="col-xs-12 col-sm-4 text-center">
-          <small>Total Activations <span class="glyphicon glyphicon-stop gray" aria-hidden="true"></span></small>
+          <small>Total Activations <span class="glyphicon glyphicon-stop gray" style="color: #f5f5f5;" aria-hidden="true"></span></small>
           <br>
           <h1><?php print($registers_num); ?></h1>
         </div>
@@ -83,6 +87,7 @@ include_once("util/nav.php");
       </div>
 
       <br>
+      <hr>
 
       <form method="POST" action="<?= $_SERVER[PHP_SELF] ?>">
         <div class="form-group">
