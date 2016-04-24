@@ -92,7 +92,7 @@ include_once("util/nav.php");
       <form method="POST" action="<?= $_SERVER[PHP_SELF] ?>">
         <div class="form-group">
           <p class="help-block">This button simulates our donation process by classifying each non-donated wins as donations</p>
-    	   <input type="submit" name="submit" name="submit" class="btn btn-success btn-block"  value="Donate"/>
+    	   <input type="submit" name="submit" name="submit" class="btn btn-warning btn-block"  value="Donate"/>
        </div>
     	</form>
 
