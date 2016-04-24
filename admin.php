@@ -19,7 +19,7 @@ if (isset($_POST['submit'])){
   $res = $db->query($query5) or die("Error ". $db->error);
 }
 // Get number of registered game_status
-$query0 = "SELECT COUNT(*) as count FROM game_status WHERE registered=1;";
+$query0 = "SELECT COUNT(*) as count FROM game_status WHERE activated=1;";
 $registers = $db->query($query0) or die("Error ". $db->error);
 $registers = $registers->fetch_assoc();
 $registers_num = intval($registers['count']);
@@ -53,10 +53,10 @@ include_once("util/nav.php");
 
       <div class="progress">
         <div class="progress-bar progress-bar-success" style="width: <?php print($donations_percent); ?>%;">
-          <?php print(intval($donations_percent)); ?>
+          <?php print(intval($donations_percent)); ?>%
         </div>
         <div class="progress-bar progress-bar-info" style="width: <?php print($wins_percent); ?>%;">
-          <?php print(intval($wins_percent)); ?>
+          <?php print(intval($wins_percent)); ?>%
         </div>
       </div>
 
