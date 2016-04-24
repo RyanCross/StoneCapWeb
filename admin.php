@@ -71,13 +71,13 @@ include_once("util/nav.php");
         <div class="col-xs-12 col-sm-4 text-center">
           <small>Non-donated Wins</small>
           <br>
-          <h1><?php print($wins_sum); ?></h1>
+          <h1><?php print($wins_num); ?></h1>
         </div>
 
         <div class="col-xs-12 col-sm-4 text-center">
           <small>Total Activations</small>
           <br>
-          <h1><?php print($registers_sum); ?></h1>
+          <h1><?php print($registers_num); ?></h1>
         </div>
 
       </div>
