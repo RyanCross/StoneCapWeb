@@ -3,67 +3,54 @@
 //if (!$_SERVER['HTTPS']) header('location: https://babbage.cs.missouri.edu/~cs3380f14grp10');
 // Second, make sure we are not already logged in, if so, redirect to home.php, if not, display the login form
 session_start();
-// $logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
-include_once("util/header.php");
+$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
+
 include("util/database.php");
+
+// -------------------- Start Qi's work -------------------
+// First deal with the donation submission
+//$query = "SELECT game_owner, FROM_UNIXTIME(completion_date) completion_date  FROM terrachi_db.game_status WHERE donated=0, completed=1;";
+if (isset($_POST['submit'])){
+  $donation_date = time();
+  //print $buy_date;
+  $serial_key = md5($logged_in.$buy_date);
+  //print $serial_key;
+  $query5 = "UPDATE game_status SET donated=1, donation_date=".$donation_date." WHERE donated=0 AND completed=1;";
+  $res = $db->query($query5) or die("Error ". $db->error);
+}
+// Number of donations so far:
+$query1 = "SELECT COUNT(*) FROM game_status WHERE donated=1;";
+$donations = $db->query($query1) or die("Error ". $db->error);
+//$donations = $res1->fetch_assoc();
+// Wins that haven't been donated yet
+$query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1 AND donated=0;";
+$wins = $db->query($query3) or die("Error ". $db->error);
+//$wins = $res3->fetch_assoc();
+//echo array_shift(array_values($array3));
+
+
+
+include_once("util/header.php");
+
+include_once("nav.php");
 ?>
-<h3>1. Total number of trees planted to date</h3>
-    <h4>
-        <?php
-	$query1 = "SELECT COUNT(*) FROM game_status WHERE donated=1;";
-	$res1 = $db->query($query1) or die("Error ". $db->error);
-	$array1 = $res1->fetch_assoc();
-	// foreach($array1 as $key => $value)
-	//         echo $value;
-	echo array_shift(array_values($array1));
-	?>
-	</h4>
 
-<h3>2. Total amount of money that has donated as of last donation date</h3>
-	<h4>
-	<?php
-	$query2 = "SELECT COUNT(*) *10 FROM game_status WHERE donated=1;";
-	$res2 = $db->query($query2) or die("Error ". $db->error);
-	$array2 = $res2->fetch_assoc();
-	echo array_shift(array_values($array2));
-	?>
-	</h4>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+			<h1>Admin Panel</h1>
 
-<h3>3. Total number of players who have beaten the game since last donation date</h3>
-	<h4>
-	<?php
-	$query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1 AND donated=0;";
-	$res3 = $db->query($query3) or die("Error ". $db->error);
-	$array3 = $res3->fetch_assoc();
-	echo array_shift(array_values($array3));
-	?>
-	</h4>
+      <p>Donations: <?php print $donations; ?></p>
+      <p>Wins: <?php print $wins; ?></p>
 
-<h3>4. Current amount of money to be donated to charity</h3>
-	<h4>
-	<?php
-	$query4 = "SELECT COUNT(*) *10 FROM game_status WHERE completed=1 AND donated=0;";
-	$res4 = $db->query($query4) or die("Error ". $db->error);
-	$array4 = $res4->fetch_assoc();
-	echo array_shift(array_values($array4));
-	?>
-	</h4>
-	
-<h3>  5 </h3>
-	<form method = "POST" action = "<?= $_SERVER[PHP_SELF] ?>">
-	<?php
-	$query = "SELECT game_owner, FROM_UNIXTIME(completion_date) completion_date  FROM terrachi_db.game_status WHERE donated=0, completed=1;";
-	if (isset($_POST['submit'])){
-	$donation_date = time();
-	//print $buy_date;
-	$serial_key = md5($logged_in.$buy_date);
-	//print $serial_key;
-	$query5 = "UPDATE game_status SET donated=1, donation_date=".$donation_date." WHERE donated=0 AND completed=1;";			  
-	$res = $db->query($query5) or die("Error ". $db->error);
-	print_r($res);
-	}
-	
-	?>
-	<input type = "submit" name = "submit" name = "submit" class = "btn btn-success"  value = "Donate"/>
-	</form>
+      <form method = "POST" action = "<?= $_SERVER[PHP_SELF] ?>">
+    	   <input type = "submit" name = "submit" name = "submit" class = "btn btn-success"  value = "Donate"/>
+    	</form>
 
+		</div>
+	</div>
+</div>
+
+<?php
+include_once("util/footer.php");
+ ?>
