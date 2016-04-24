@@ -22,12 +22,12 @@ if (isset($_POST['submit'])){
 $query1 = "SELECT COUNT(*) FROM game_status WHERE donated=1;";
 $donations = $db->query($query1) or die("Error ". $db->error);
 $donations = $donations->fetch_assoc();
-$donations_num = int($donations[0]);
+$donations_num = intval($donations[0]);
 // Wins that haven't been donated yet
 $query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1 AND donated=0;";
 $wins = $db->query($query3) or die("Error ". $db->error);
 $wins = $wins->fetch_assoc();
-$wins_num = int($wins[0]);
+$wins_num = intval($wins[0]);
 //echo array_shift(array_values($array3));
 
 
