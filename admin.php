@@ -2,8 +2,8 @@
 // First, make sure we are on HTTPS, if not, switch to that
 //if (!$_SERVER['HTTPS']) header('location: https://babbage.cs.missouri.edu/~cs3380f14grp10');
 // Second, make sure we are not already logged in, if so, redirect to home.php, if not, display the login form
-session_start();
-$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
+//session_start();
+//$logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
 
 include("util/database.php");
 
@@ -21,11 +21,11 @@ if (isset($_POST['submit'])){
 // Number of donations so far:
 $query1 = "SELECT COUNT(*) FROM game_status WHERE donated=1;";
 $donations = $db->query($query1) or die("Error ". $db->error);
-//$donations = $res1->fetch_assoc();
+$donations = $donations->fetch_assoc();
 // Wins that haven't been donated yet
 $query3 = "SELECT COUNT(*) FROM game_status WHERE completed=1 AND donated=0;";
 $wins = $db->query($query3) or die("Error ". $db->error);
-//$wins = $res3->fetch_assoc();
+$wins = $wins->fetch_assoc();
 //echo array_shift(array_values($array3));
 
 
@@ -40,8 +40,8 @@ include_once("nav.php");
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
 			<h1>Admin Panel</h1>
 
-      <p>Donations: <?php print $donations; ?></p>
-      <p>Wins: <?php print $wins; ?></p>
+      <p>Donations: <?php print($donations); ?></p>
+      <p>Wins: <?php print($wins); ?></p>
 
       <form method = "POST" action = "<?= $_SERVER[PHP_SELF] ?>">
     	   <input type = "submit" name = "submit" name = "submit" class = "btn btn-success"  value = "Donate"/>
