@@ -62,24 +62,28 @@ include_once("util/nav.php");
 
       <div class="row">
 
-        <div class="col-xs-12 col-sm-6 text-center">
+        <div class="col-xs-12 col-sm-4 text-center">
           <small>Donations to Date</small>
           <br>
           <h1><?php print($donations_num); ?></h1>
         </div>
 
-        <div class="col-xs-12 col-sm-6 text-center">
+        <div class="col-xs-12 col-sm-4 text-center">
           <small>Non-donated Wins</small>
           <br>
-          <h1><?php print($donations_num); ?></h1>
+          <h1><?php print($wins_sum); ?></h1>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 text-center">
+          <small>Total Activations</small>
+          <br>
+          <h1><?php print($registers_sum); ?></h1>
         </div>
 
       </div>
-      <p>Donations: <?php print_r($donations); print(" "+$donations_num); ?></p>
-      <p>Wins: <?php print_r($wins); print(" "+$wins_num); ?></p>
 
-      <form method = "POST" action = "<?= $_SERVER[PHP_SELF] ?>">
-    	   <input type = "submit" name = "submit" name = "submit" class = "btn btn-success"  value = "Donate"/>
+      <form method="POST" action="<?= $_SERVER[PHP_SELF] ?>">
+    	   <input type="submit" name="submit" name="submit" class="btn btn-success"  value="Donate"/>
     	</form>
 
 		</div>
