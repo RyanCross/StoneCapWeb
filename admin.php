@@ -37,9 +37,9 @@ $wins_num = intval($wins['count']);
 
 // Some progress bar calculations
 // percentage of open games
-$wins_percent = (double)$wins_num / (double)$registers_num;
+$wins_percent = (double)$wins_num / (double)$registers_num * 100;
 // percentage of validated games
-$donations_percent = (double)$donations_num / (double)$registers_num;
+$donations_percent = (double)$donations_num / (double)$registers_num * 100;
 
 include_once("util/header.php");
 
