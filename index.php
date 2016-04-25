@@ -26,7 +26,7 @@
     </div>
     </div>
 
-    <h1>Terrachi</h1>
+    <h1><img class="img-responsive" src="img/logodark.png" /></h1>
   </div>
 </div>
 
