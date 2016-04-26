@@ -38,8 +38,8 @@
 
 		  <!-- About the game -->
 		  <div class="row">
-		    <div class="col-xs-12 col-sm-4"><img src="img/run1.png" class="img-responsive pull-right"/></div>
-		    <div class="col-xs-12 col-sm-8">
+		    <div class="col-xs-12 col-sm-2"><img src="img/run1.png" class="img-responsive pull-right"/></div>
+		    <div class="col-xs-12 col-sm-10">
 		      <h2>About Terrachi</h2>
 		      <p>
 		        On the first day of the Season of Growth, the kodama gather to send off their
@@ -52,6 +52,7 @@
 		    </div>
 		  </div>
 
+			<br>
 
 			<!-- Carousel -->
 			<div id="screenshots" class="carousel slide" data-ride="carousel">
@@ -109,6 +110,8 @@
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
+
+			<br>
 
 
 		  <!-- About the team -->
