@@ -34,9 +34,11 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 
+			<br>
+
 		  <!-- About the game -->
 		  <div class="row">
-		    <div class="col-xs-12 col-sm-4"><img src="img/Whip_Idle.png" class="img-responsive pull-right"/></div>
+		    <div class="col-xs-12 col-sm-4"><img src="img/run1.png" class="img-responsive pull-right"/></div>
 		    <div class="col-xs-12 col-sm-8">
 		      <h2>About Terrachi</h2>
 		      <p>
@@ -49,7 +51,65 @@
 		      </p>
 		    </div>
 		  </div>
+
+
 			<!-- Carousel -->
+			<div id="screenshots" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#screenshots" data-slide-to="0" class="active"></li>
+			    <li data-target="#screenshots" data-slide-to="1"></li>
+					<li data-target="#screenshots" data-slide-to="2"></li>
+			    <li data-target="#screenshots" data-slide-to="3"></li>
+					<li data-target="#screenshots" data-slide-to="4"></li>
+					<li data-target="#screenshots" data-slide-to="5"></li>
+					<li data-target="#screenshots" data-slide-to="6"></li>
+					<li data-target="#screenshots" data-slide-to="7"></li>
+					<li data-target="#screenshots" data-slide-to="8"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="img/playing1.png">
+			    </div>
+					<div class="item">
+			      <img src="img/introtext.png">
+			    </div>
+			    <div class="item">
+			      <img src="img/run1.png">
+			    </div>
+					<div class="item">
+			      <img src="img/ghost.png">
+			    </div>
+					<div class="item">
+			      <img src="img/grappling.png">
+			    </div>
+					<div class="item">
+			      <img src="img/play2.png">
+			    </div>
+					<div class="item">
+			      <img src="img/play3.png">
+			    </div>
+					<div class="item">
+			      <img src="img/pause.png">
+			    </div>
+					<div class="item">
+			      <img src="img/play4.png">
+			    </div>
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#screenshots" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#screenshots" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+
 
 		  <!-- About the team -->
 			<h2>Meet the team</h2>

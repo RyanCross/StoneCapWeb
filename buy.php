@@ -84,7 +84,7 @@
 
 			<ol>
 				<li>Buy a license key.</li>
-				<li><a href="/game/Terrachi_1_0_0.zip" class="btn btn-successful" download>Download Game</a> and save locally.</li>
+				<li><a href="/game/Terrachi_1_0_0.zip" class="btn btn-success" download>Download Game</a> and save locally.</li>
 				<li>Unzip the game to your desired destination.</li>
 				<li>Run Terrachi.exe</li>
 				<li>Register the game with your license key.</li>
