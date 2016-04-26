@@ -52,7 +52,7 @@
 		    </div>
 		  </div>
 
-			<br>
+			<br><br>
 
 			<!-- Carousel -->
 			<div id="screenshots" class="carousel slide" data-ride="carousel">
@@ -66,7 +66,6 @@
 					<li data-target="#screenshots" data-slide-to="5"></li>
 					<li data-target="#screenshots" data-slide-to="6"></li>
 					<li data-target="#screenshots" data-slide-to="7"></li>
-					<li data-target="#screenshots" data-slide-to="8"></li>
 			  </ol>
 
 			  <!-- Wrapper for slides -->
@@ -76,9 +75,6 @@
 			    </div>
 					<div class="item">
 			      <img src="img/introtext.png">
-			    </div>
-			    <div class="item">
-			      <img src="img/run1.png">
 			    </div>
 					<div class="item">
 			      <img src="img/ghost.png">
