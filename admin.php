@@ -5,7 +5,7 @@
 session_start();
 $logged_in = empty($_SESSION['login']) ? false : $_SESSION['login'];
 
-if($logged_in != "cholasca@gmail.com"){
+if($logged_in != "admin@terrachi.com"){
   header("Location: index.php");
 }
 

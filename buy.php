@@ -77,6 +77,20 @@
 				</div>
 		    <input type="submit" name="submit" class="btn btn-success btn-block" value="Buy now!" />
 			</form>
+
+			<hr>
+
+			<h2>Installation Instructions</h2>
+
+			<ol>
+				<li>Buy a license key.</li>
+				<li><a href="/game/Terrachi_1_0_0.zip" class="btn btn-successful" download>Download Game</a> and save locally.</li>
+				<li>Unzip the game to your desired destination.</li>
+				<li>Run Terrachi.exe</li>
+				<li>Register the game with your license key.</li>
+				<li>Enjoy!</li>
+			</ol>
+
 		  <?php } else { ?>
 
 		    <p>You need to be logged in to buy the game. Log in <a href="login.php">here</a>!</p>

@@ -36,7 +36,7 @@
 
 		  <!-- About the game -->
 		  <div class="row">
-		    <div class="col-xs-12 col-sm-4"><img src="img/kodama256.png" class="img-responsive pull-right"/></div>
+		    <div class="col-xs-12 col-sm-4"><img src="img/Whip_Idle.png" class="img-responsive pull-right"/></div>
 		    <div class="col-xs-12 col-sm-8">
 		      <h2>About Terrachi</h2>
 		      <p>
@@ -57,27 +57,27 @@
 				<div class="col-xs-12 col-sm-4">
 					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/ryan.png" />
-							<div class="caption">
-									<h4>Ryan Cross</h4>
-									<p>Lead Systems Developer</p>
+							<div class="caption text-center">
+									<h3>Ryan Cross</h3>
+									<p>Level Designer, Player Mechanics and Movement</p>
 							</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/tama.jpg" />
-							<div class="caption">
-									<h4>Tama Chakrabarty</h4>
-									<p>Creative Director</p>
+							<div class="caption text-center">
+									<h3>Tama Chakrabarty</h3>
+									<p>Creative Director, Animator, Artist</p>
 							</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/qi.jpg" />
-							<div class="caption">
-									<h4>Qi Yu</h4>
-									<p>Lead Security Architect</p>
+							<div class="caption text-center">
+									<h3>Qi Yu</h3>
+									<p>Security Architect, Web Developer</p>
 							</div>
 					</div>
 				</div>
@@ -86,27 +86,27 @@
 				<div class="col-xs-12 col-sm-4">
 					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/nick.jpg" />
-							<div class="caption">
-									<h4>Nicholas Cappo</h4>
-									<p>Quality Assurance Engineer</p>
+							<div class="caption text-center">
+									<h3>Nicholas Cappo</h3>
+									<p>UX Director, API Developer</p>
 							</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/mike.jpg" />
-							<div class="caption">
-									<h4>Mike Henkey</h4>
-									<p>Lead AI Developer</p>
+							<div class="caption text-center">
+									<h3>Mike Henkey</h3>
+									<p>Lead AI Developer, Mechanic Implementation</p>
 							</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/dillon.png" />
-							<div class="caption">
-									<h4>Dillon Byrne</h4>
-									<p>Physics and Lighting Lead</p>
+							<div class="caption text-center">
+									<h3>Dillon Byrne</h3>
+									<p>Composer, Sound Design, Mechanic Implementation</p>
 							</div>
 					</div>
 				</div>
