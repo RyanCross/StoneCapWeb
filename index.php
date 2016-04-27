@@ -155,7 +155,7 @@
 					<div class="thumbnail" style="border: none">
 							<img class="img-responsive img-circle" src="img/mike.jpg" />
 							<div class="caption text-center">
-									<h3>Mike Henkey</h3>
+									<h3>Mike Henke</h3>
 									<p>Lead AI Developer, Mechanic Implementation</p>
 							</div>
 					</div>
